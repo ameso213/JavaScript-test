@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <form id="form1" onsubmit=" return ValidateForm()">
+        Email: <input type="email" name="email"><br> 
+        Name: <input type="text" name="name"><br>
+        Password: <input type="password" name="password"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <style>
+
+        input[type="submit"] {
+            background-color: skyblue; /* Green */
+            color: black;
+            padding: 5px;
+            text-align: center;
+            display: inline-block;
+            font-size: 5x;
+            margin: 5px;
+            border-radius: 8px;
+          }
+    </style>
+
+</body>
+<script>
+    function ValidateForm() {
+            var email = document.getElementsByName("email")[0];
+            var name = document.getElementsByName("name")[0];
+            var password = document.getElementsByName("password")[0];
+
+        if (email.value === '' || name.value === '' || password.value === '') {
+            alert("Please fill all the values");
+        }                   
+    }
+</script>
+</body>
+</html>
